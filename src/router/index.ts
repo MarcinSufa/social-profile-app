@@ -1,21 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import DemoPage from '@/pages/DemoPage.vue'
-import IndexPage from '@/pages/IndexPage.vue'
+import UserInformationPage from '@/pages/UserInformation.vue'
+import UserInfoForm from '@/pages/UserInfoForm.vue'
 
 const routes = [
   {
-    path: '/',
-    component: IndexPage,
+    path: '/user-profile/',
+    component: UserInformationPage,
     meta: {
-      title: 'Vite + Vue + TypeScript + Tailwind Starter Template',
+      title: 'User Profile',
     },
   },
   {
-    path: '/demo/',
-    component: DemoPage,
+    path: '/user-information-form/',
+    component: UserInfoForm,
     meta: {
-      title: 'Demo title',
+      title: 'User Form'
     },
   },
 ]

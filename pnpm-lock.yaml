@@ -8,6 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@formkit/vue':
+        specifier: ^1.6.3
+        version: 1.6.3(tailwindcss@3.4.3)(vue@3.4.26(typescript@5.4.5))
+      '@fortawesome/fontawesome-svg-core':
+        specifier: ^6.5.2
+        version: 6.5.2
+      '@fortawesome/free-solid-svg-icons':
+        specifier: ^6.5.2
+        version: 6.5.2
+      '@fortawesome/vue-fontawesome':
+        specifier: ^3.0.6
+        version: 3.0.6(@fortawesome/fontawesome-svg-core@6.5.2)(vue@3.4.26(typescript@5.4.5))
       '@unhead/vue':
         specifier: 1.9.8
         version: 1.9.8(vue@3.4.26(typescript@5.4.5))
@@ -71,10 +83,10 @@ importers:
         version: 7.8.0(eslint@8.57.0)(typescript@5.4.5)
       '@vitejs/plugin-vue':
         specifier: 5.0.4
-        version: 5.0.4(vite@5.2.10(@types/node@20.12.8))(vue@3.4.26(typescript@5.4.5))
+        version: 5.0.4(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2))(vue@3.4.26(typescript@5.4.5))
       '@vitest/coverage-v8':
         specifier: 1.5.3
-        version: 1.5.3(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0))
+        version: 1.5.3(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(sass@1.77.2))
       '@vue/eslint-config-prettier':
         specifier: 9.0.0
         version: 9.0.0(eslint@8.57.0)(prettier@3.2.5)
@@ -141,6 +153,9 @@ importers:
       prettier:
         specifier: 3.2.5
         version: 3.2.5
+      sass:
+        specifier: ^1.77.2
+        version: 1.77.2
       tailwindcss:
         specifier: 3.4.3
         version: 3.4.3
@@ -155,13 +170,13 @@ importers:
         version: 0.27.0(@babel/parser@7.24.5)(rollup@4.17.2)(vue@3.4.26(typescript@5.4.5))
       vite:
         specifier: 5.2.10
-        version: 5.2.10(@types/node@20.12.8)
+        version: 5.2.10(@types/node@20.12.8)(sass@1.77.2)
       vite-plugin-vue-devtools:
         specifier: 7.1.3
-        version: 7.1.3(rollup@4.17.2)(vite@5.2.10(@types/node@20.12.8))(vue@3.4.26(typescript@5.4.5))
+        version: 7.1.3(rollup@4.17.2)(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2))(vue@3.4.26(typescript@5.4.5))
       vitest:
         specifier: 1.5.3
-        version: 1.5.3(@types/node@20.12.8)(jsdom@24.0.0)
+        version: 1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(sass@1.77.2)
       vue-tsc:
         specifier: 2.0.16
         version: 2.0.16(typescript@5.4.5)
@@ -524,6 +539,67 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@formkit/core@1.6.3':
+    resolution: {integrity: sha512-rirECaQABzO2ExM2EYUuXRRQfLShF//L98jWZPZUZGIlPuV6ow6sp06CO4bCC3r1lKVuP6IQ1kpvhUu9j/91hQ==}
+
+  '@formkit/dev@1.6.3':
+    resolution: {integrity: sha512-MSN4xrzr+2ditdJ8D+09I36rp2WU+EHXPAKS7KE6zxyn2/kCSPpyO7zbSixz26TSdElV0QZS+hojQhmAjNQTAg==}
+
+  '@formkit/i18n@1.6.3':
+    resolution: {integrity: sha512-1kfCmtcRfB0b+Qw97IA9QcqYfPvplME1f5XXzSe9si7EegtcFWH2gYpu9itI+LpIQGZA0ArxZREGXjoFjt9LLQ==}
+
+  '@formkit/inputs@1.6.3':
+    resolution: {integrity: sha512-BeQDOq7llxVLHWKiAWt9NVFJBwYWAv/HCgQHH8rpDUHtapkOMz8j95ZmLE0p/oNgJvmLNdhABmNdmp+SQEYRdQ==}
+
+  '@formkit/observer@1.6.3':
+    resolution: {integrity: sha512-WAKzl3BmGB0Hvoj2b87+36GfeTVReZOu/FQ03IvQHAlaOrG2n+e3AwW1KHLChZ5+UQ8FjC1qkpyyQ2nCXpnYwg==}
+
+  '@formkit/rules@1.6.3':
+    resolution: {integrity: sha512-5XwZ4AMslUJPlhPLshzmoeuQPkCgGR6QN8QYRfYinn/Xt1HBd5r4PUIjwAotDRc4sJov6ZktV+zkpH0WczARXA==}
+
+  '@formkit/themes@1.6.3':
+    resolution: {integrity: sha512-4ItGSvD1rYe2bXrNdd26jtim1QfqyOoOy4kjLpbR27npQUHBrlzkEyhKk0yoUPbvUh/ox2Q0IEaUI+Y32PQtLA==}
+    peerDependencies:
+      tailwindcss: ^3.2.0
+      unocss: 0.x.x
+      windicss: ^3.0.0
+    peerDependenciesMeta:
+      tailwindcss:
+        optional: true
+      unocss:
+        optional: true
+      windicss:
+        optional: true
+
+  '@formkit/utils@1.6.3':
+    resolution: {integrity: sha512-ke3G91J8uHQ6JbDsPv8gxm7kmXI7LU7zd6Xe/TdG225XUXVhgnCrAZTxugLBriziF+9cHDo8QfapDiesD2cuDg==}
+
+  '@formkit/validation@1.6.3':
+    resolution: {integrity: sha512-GmYdjUKYBWUitQg46Av1F/sMJF7W5tk6otssZal5Kh0oG9JmQ2jOVVK2B9eGKCzIeXZ2ekSkOH7O/DcXWPWHnA==}
+
+  '@formkit/vue@1.6.3':
+    resolution: {integrity: sha512-d6STY6onIqNdNErtxmAFQU/qaq7BYSXyO2aRw6i55cXDSHgtgsH3/Lc5aNTgk1GMonWpX0LT0XhLWc6uHGGaxA==}
+    peerDependencies:
+      vue: ^3.4.0
+
+  '@fortawesome/fontawesome-common-types@6.5.2':
+    resolution: {integrity: sha512-gBxPg3aVO6J0kpfHNILc+NMhXnqHumFxOmjYCFfOiLZfwhnnfhtsdA2hfJlDnj+8PjAs6kKQPenOTKj3Rf7zHw==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/fontawesome-svg-core@6.5.2':
+    resolution: {integrity: sha512-5CdaCBGl8Rh9ohNdxeeTMxIj8oc3KNBgIeLMvJosBMdslK/UnEB8rzyDRrbKdL1kDweqBPo4GT9wvnakHWucZw==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-solid-svg-icons@6.5.2':
+    resolution: {integrity: sha512-QWFZYXFE7O1Gr1dTIp+D6UcFUF0qElOnZptpi7PBUMylJh+vFmIedVe1Ir6RM1t2tEQLLSV1k7bR4o92M+uqlw==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/vue-fontawesome@3.0.6':
+    resolution: {integrity: sha512-akrL7lTroyNpPkoHtvK2UpsMzJr6jXdHaQ0YdcwqDsB8jdwlpNHZYijpOUd9KJsARr+VB3WXY4EyObepqJ4ytQ==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      vue: '>= 3.0.0 < 4'
 
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
@@ -1819,6 +1895,9 @@ packages:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
 
+  immutable@4.3.6:
+    resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
+
   import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -2731,6 +2810,11 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
+  sass@1.77.2:
+    resolution: {integrity: sha512-eb4GZt1C3avsX3heBNlrc7I09nyT00IUuo4eFhAbeXWU2fvA7oXI53SxODVAA+zgZCk9aunAZgO+losjR3fAwA==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+
   saxes@6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
@@ -3622,6 +3706,83 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
+  '@formkit/core@1.6.3':
+    dependencies:
+      '@formkit/utils': 1.6.3
+
+  '@formkit/dev@1.6.3':
+    dependencies:
+      '@formkit/core': 1.6.3
+      '@formkit/utils': 1.6.3
+
+  '@formkit/i18n@1.6.3':
+    dependencies:
+      '@formkit/core': 1.6.3
+      '@formkit/utils': 1.6.3
+      '@formkit/validation': 1.6.3
+
+  '@formkit/inputs@1.6.3':
+    dependencies:
+      '@formkit/core': 1.6.3
+      '@formkit/utils': 1.6.3
+
+  '@formkit/observer@1.6.3':
+    dependencies:
+      '@formkit/core': 1.6.3
+      '@formkit/utils': 1.6.3
+
+  '@formkit/rules@1.6.3':
+    dependencies:
+      '@formkit/core': 1.6.3
+      '@formkit/utils': 1.6.3
+      '@formkit/validation': 1.6.3
+
+  '@formkit/themes@1.6.3(tailwindcss@3.4.3)':
+    dependencies:
+      '@formkit/core': 1.6.3
+    optionalDependencies:
+      tailwindcss: 3.4.3
+
+  '@formkit/utils@1.6.3': {}
+
+  '@formkit/validation@1.6.3':
+    dependencies:
+      '@formkit/core': 1.6.3
+      '@formkit/observer': 1.6.3
+      '@formkit/utils': 1.6.3
+
+  '@formkit/vue@1.6.3(tailwindcss@3.4.3)(vue@3.4.26(typescript@5.4.5))':
+    dependencies:
+      '@formkit/core': 1.6.3
+      '@formkit/dev': 1.6.3
+      '@formkit/i18n': 1.6.3
+      '@formkit/inputs': 1.6.3
+      '@formkit/observer': 1.6.3
+      '@formkit/rules': 1.6.3
+      '@formkit/themes': 1.6.3(tailwindcss@3.4.3)
+      '@formkit/utils': 1.6.3
+      '@formkit/validation': 1.6.3
+      vue: 3.4.26(typescript@5.4.5)
+    transitivePeerDependencies:
+      - tailwindcss
+      - unocss
+      - windicss
+
+  '@fortawesome/fontawesome-common-types@6.5.2': {}
+
+  '@fortawesome/fontawesome-svg-core@6.5.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.5.2
+
+  '@fortawesome/free-solid-svg-icons@6.5.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.5.2
+
+  '@fortawesome/vue-fontawesome@3.0.6(@fortawesome/fontawesome-svg-core@6.5.2)(vue@3.4.26(typescript@5.4.5))':
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.5.2
+      vue: 3.4.26(typescript@5.4.5)
+
   '@hapi/hoek@9.3.0': {}
 
   '@hapi/topo@5.1.0':
@@ -3953,12 +4114,12 @@ snapshots:
       unhead: 1.9.8
       vue: 3.4.26(typescript@5.4.5)
 
-  '@vitejs/plugin-vue@5.0.4(vite@5.2.10(@types/node@20.12.8))(vue@3.4.26(typescript@5.4.5))':
+  '@vitejs/plugin-vue@5.0.4(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2))(vue@3.4.26(typescript@5.4.5))':
     dependencies:
-      vite: 5.2.10(@types/node@20.12.8)
+      vite: 5.2.10(@types/node@20.12.8)(sass@1.77.2)
       vue: 3.4.26(typescript@5.4.5)
 
-  '@vitest/coverage-v8@1.5.3(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0))':
+  '@vitest/coverage-v8@1.5.3(vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(sass@1.77.2))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -3973,7 +4134,7 @@ snapshots:
       std-env: 3.7.0
       strip-literal: 2.1.0
       test-exclude: 6.0.0
-      vitest: 1.5.3(@types/node@20.12.8)(jsdom@24.0.0)
+      vitest: 1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(sass@1.77.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -4080,14 +4241,14 @@ snapshots:
 
   '@vue/devtools-api@6.6.1': {}
 
-  '@vue/devtools-core@7.1.3(vite@5.2.10(@types/node@20.12.8))(vue@3.4.26(typescript@5.4.5))':
+  '@vue/devtools-core@7.1.3(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2))(vue@3.4.26(typescript@5.4.5))':
     dependencies:
       '@vue/devtools-kit': 7.1.3(vue@3.4.26(typescript@5.4.5))
       '@vue/devtools-shared': 7.1.3
       mitt: 3.0.1
       nanoid: 3.3.7
       pathe: 1.1.2
-      vite-hot-client: 0.2.3(vite@5.2.10(@types/node@20.12.8))
+      vite-hot-client: 0.2.3(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2))
     transitivePeerDependencies:
       - vite
       - vue
@@ -5164,6 +5325,8 @@ snapshots:
 
   ignore@5.3.1: {}
 
+  immutable@4.3.6: {}
+
   import-fresh@3.3.0:
     dependencies:
       parent-module: 1.0.1
@@ -6027,6 +6190,12 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
+  sass@1.77.2:
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
+
   saxes@6.0.0:
     dependencies:
       xmlchars: 2.2.0
@@ -6413,17 +6582,17 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-hot-client@0.2.3(vite@5.2.10(@types/node@20.12.8)):
+  vite-hot-client@0.2.3(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2)):
     dependencies:
-      vite: 5.2.10(@types/node@20.12.8)
+      vite: 5.2.10(@types/node@20.12.8)(sass@1.77.2)
 
-  vite-node@1.5.3(@types/node@20.12.8):
+  vite-node@1.5.3(@types/node@20.12.8)(sass@1.77.2):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.10(@types/node@20.12.8)
+      vite: 5.2.10(@types/node@20.12.8)(sass@1.77.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -6434,7 +6603,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-inspect@0.8.4(rollup@4.17.2)(vite@5.2.10(@types/node@20.12.8)):
+  vite-plugin-inspect@0.8.4(rollup@4.17.2)(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2)):
     dependencies:
       '@antfu/utils': 0.7.7
       '@rollup/pluginutils': 5.1.0(rollup@4.17.2)
@@ -6445,28 +6614,28 @@ snapshots:
       perfect-debounce: 1.0.0
       picocolors: 1.0.0
       sirv: 2.0.4
-      vite: 5.2.10(@types/node@20.12.8)
+      vite: 5.2.10(@types/node@20.12.8)(sass@1.77.2)
     transitivePeerDependencies:
       - rollup
       - supports-color
 
-  vite-plugin-vue-devtools@7.1.3(rollup@4.17.2)(vite@5.2.10(@types/node@20.12.8))(vue@3.4.26(typescript@5.4.5)):
+  vite-plugin-vue-devtools@7.1.3(rollup@4.17.2)(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2))(vue@3.4.26(typescript@5.4.5)):
     dependencies:
-      '@vue/devtools-core': 7.1.3(vite@5.2.10(@types/node@20.12.8))(vue@3.4.26(typescript@5.4.5))
+      '@vue/devtools-core': 7.1.3(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2))(vue@3.4.26(typescript@5.4.5))
       '@vue/devtools-kit': 7.1.3(vue@3.4.26(typescript@5.4.5))
       '@vue/devtools-shared': 7.1.3
       execa: 8.0.1
       sirv: 2.0.4
-      vite: 5.2.10(@types/node@20.12.8)
-      vite-plugin-inspect: 0.8.4(rollup@4.17.2)(vite@5.2.10(@types/node@20.12.8))
-      vite-plugin-vue-inspector: 5.0.1(vite@5.2.10(@types/node@20.12.8))
+      vite: 5.2.10(@types/node@20.12.8)(sass@1.77.2)
+      vite-plugin-inspect: 0.8.4(rollup@4.17.2)(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2))
+      vite-plugin-vue-inspector: 5.0.1(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - rollup
       - supports-color
       - vue
 
-  vite-plugin-vue-inspector@5.0.1(vite@5.2.10(@types/node@20.12.8)):
+  vite-plugin-vue-inspector@5.0.1(vite@5.2.10(@types/node@20.12.8)(sass@1.77.2)):
     dependencies:
       '@babel/core': 7.24.5
       '@babel/plugin-proposal-decorators': 7.24.1(@babel/core@7.24.5)
@@ -6477,11 +6646,11 @@ snapshots:
       '@vue/compiler-dom': 3.4.26
       kolorist: 1.8.0
       magic-string: 0.30.10
-      vite: 5.2.10(@types/node@20.12.8)
+      vite: 5.2.10(@types/node@20.12.8)(sass@1.77.2)
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.2.10(@types/node@20.12.8):
+  vite@5.2.10(@types/node@20.12.8)(sass@1.77.2):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
@@ -6489,8 +6658,9 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.12.8
       fsevents: 2.3.3
+      sass: 1.77.2
 
-  vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0):
+  vitest@1.5.3(@types/node@20.12.8)(jsdom@24.0.0)(sass@1.77.2):
     dependencies:
       '@vitest/expect': 1.5.3
       '@vitest/runner': 1.5.3
@@ -6509,8 +6679,8 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.2.10(@types/node@20.12.8)
-      vite-node: 1.5.3(@types/node@20.12.8)
+      vite: 5.2.10(@types/node@20.12.8)(sass@1.77.2)
+      vite-node: 1.5.3(@types/node@20.12.8)(sass@1.77.2)
       why-is-node-running: 2.2.2
     optionalDependencies:
       '@types/node': 20.12.8
