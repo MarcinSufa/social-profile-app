@@ -105,7 +105,7 @@ const fileSize = function({ value }) {
         <div :class='[context.classes.help]'>
           {{ context.help }} <br />
           <span
-          >{{ 20 - (context._value ? context._value.length : 0) }} / 300
+          >{{ 300 - (context._value ? context._value.length : 0) }} / 300
             characters remaining.</span
           >
         </div>
