@@ -20,9 +20,9 @@ useHead({
 
 </script>
 <template>
-  <div class='h-screen'>
+  <div>
     <AppHeader />
-    <div class='container max-w-2xl mx-auto shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 rounded mt-6'>
+    <div class='container mb-12 max-w-2xl mx-auto shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 rounded mt-6'>
       <main>
         <router-view v-slot='{ Component }'>
           <transition name='fade' mode='out-in'>
