@@ -5,6 +5,13 @@ import UserInfoForm from '@/pages/UserInfoForm.vue'
 
 const routes = [
   {
+    path: '/',
+    component: UserInformationPage,
+    meta: {
+      title: 'User Profile',
+    },
+  },
+  {
     path: '/user-profile/',
     component: UserInformationPage,
     meta: {
@@ -15,7 +22,7 @@ const routes = [
     path: '/user-information-form/',
     component: UserInfoForm,
     meta: {
-      title: 'User Form'
+      title: 'User Form',
     },
   },
 ]
