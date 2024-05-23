@@ -27,15 +27,16 @@ const userProfileData = computed(() => {
 <template>
   <div class='mx-auto md:px-6 prose-indigo sm:rounded-md'>
     <div v-if='userProfile' class='p-4'>
-      <div class='flex p-2 justify-between border-gray:50 border-b items-center'><div class='flex'>
-        <h1 class='text-3xl font-bold mx-4'>
-          User Profile </h1>
-        <router-link to='/user-information-form/' class='m-auto flex justify-center'>
-          <button class='bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 px-4 rounded'>
-            edit profile
-          </button>
-        </router-link>
-      </div>
+      <div class='flex p-2 justify-between border-gray:50 border-b items-center'>
+        <div class='flex'>
+          <h1 class='text-3xl font-bold mx-4'>
+            User Profile </h1>
+          <router-link to='/user-information-form/' class='m-auto flex justify-center'>
+            <button class='bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 px-4 rounded'>
+              edit profile
+            </button>
+          </router-link>
+        </div>
 
         <img :src='appLogoLarge'
              alt='Social Hive logo'
@@ -43,9 +44,8 @@ const userProfileData = computed(() => {
       </div>
 
       <div class='md:grid md:grid-cols-2'>
-        <div class='user-image-wrapper'>
-          <div class='user-image'>
-            <img :src='userImage' alt='User image' />
+        <div class='user-image-wrapper flex items-center m-auto justify-center'>
+          <div class='user-image' :style="{ backgroundImage: `url(${userImage})`, backgroundPosition: 'center' }">
           </div>
         </div>
 
@@ -86,13 +86,16 @@ const userProfileData = computed(() => {
   }
 
   &-image {
-    line-height: 0; /* remove line-height */
-    margin: 15px auto;
-    border: 4px solid rgba(37, 99, 235, 0.4);
-    border-radius: 50%; /* relative value */
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid rgb(110, 143, 216);
     transition: linear 0.25s;
-    height: 12em;
-    width: 12em;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     &-wrapper {
       @media (max-width: 768px) {
         margin: 1em auto;
@@ -102,12 +105,13 @@ const userProfileData = computed(() => {
   }
 
   &-image img {
-    border-radius: 50%;
+    width: 100%;
+    height: auto;
   }
 
   &-image:hover {
     transition: ease-out 0.2s;
-    border: 4px solid rgba(37, 99, 235, 0.6);
+    border: 4px solid rgba(37, 99, 235);
     -webkit-transition: ease-out 0.2s;
   }
 }

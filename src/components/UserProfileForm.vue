@@ -8,6 +8,23 @@ function submitApplication(submitData: any) {
   store.goToProfile()
 }
 
+function getCurrentDate() {
+  const today = new Date()
+  const year = today.getFullYear()
+  let month = today.getMonth() + 1
+  let day = today.getDate()
+
+  if (month < 10) {
+    month = `0${month}`
+  }
+
+  if (day < 10) {
+    day = `0${day}`
+  }
+
+  return `${year}-${month}-${day}`
+}
+
 const fileSize = function({ value }) {
   const fileSizeLimit = 1000000 // 1MB
   return value[0]?.file?.size <= fileSizeLimit
@@ -73,7 +90,7 @@ const fileSize = function({ value }) {
         type='date'
         label='Date of birth'
         help='Enter your birthday.'
-        validation='required|date_between:1924-01-01:00:01:00,2024-05-22:23:59:59'
+        :validation='`required|date_between:1924-01-01:00:01:00,${getCurrentDate()}:23:59:59`'
         :validation-messages="{
             date_between: 'Incorrect date of birth.',
           }"
